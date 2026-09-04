@@ -41,6 +41,10 @@ function oneserv_assets() {
 	wp_enqueue_style( 'oneserv-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap', array(), null );
 	wp_enqueue_style( 'oneserv-style', get_stylesheet_uri(), array(), ONESERV_VERSION );
 	wp_enqueue_script( 'oneserv-main', ONESERV_URI . '/assets/js/main.js', array(), ONESERV_VERSION, true );
+
+	if ( is_page( 'reviews' ) && oneserv_trustpilot_business_id() ) {
+		wp_enqueue_script( 'trustpilot-widget', 'https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js', array(), null, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'oneserv_assets' );
 
@@ -77,6 +81,32 @@ function oneserv_contact( $key = '' ) {
 		return isset( $contact[ $key ] ) ? $contact[ $key ] : '';
 	}
 	return $contact;
+}
+
+/**
+ * Instant boiler quote tool URL.
+ *
+ * The instant quote tool is a separate app, built and hosted on its own —
+ * this theme only embeds it via iframe (see page-new-boilers.php) rather
+ * than rebuilding it inside WordPress. Set its live URL here, or override
+ * with the 'oneserv_quote_tool_url' filter / a future Customizer setting.
+ * Left empty, the new-boilers page falls back to a "coming soon" card.
+ */
+function oneserv_quote_tool_url() {
+	$url = ''; // e.g. 'https://quote.oneserv.co.uk' once the tool is live.
+	return apply_filters( 'oneserv_quote_tool_url', $url );
+}
+
+/**
+ * Trustpilot Business Unit ID, for the live reviews widget on the Reviews
+ * page. Find it in Trustpilot Business > Integrations > Widgets (it's the
+ * 24-character "Business Unit ID" for a Widget, not your public profile
+ * URL). Left empty, the Reviews page falls back to the static sample
+ * testimonials / the "Reviews" custom post type instead.
+ */
+function oneserv_trustpilot_business_id() {
+	$id = ''; // e.g. '5f1a2b3c4d5e6f7a8b9c0d1e' once you have a real ID.
+	return apply_filters( 'oneserv_trustpilot_business_id', $id );
 }
 
 /**

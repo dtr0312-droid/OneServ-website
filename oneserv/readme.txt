@@ -37,6 +37,15 @@ and Sitemap.
   Appearance > Customize if you prefer a raster logo.
 * Colours: edit the CSS custom properties at the top of style.css
   (--color-primary, --color-accent, etc.).
+* Instant boiler quote tool: the New Boilers page embeds it via iframe.
+  Set its live URL in `oneserv_quote_tool_url()` in functions.php (or hook
+  the 'oneserv_quote_tool_url' filter). Until set, that page shows a
+  "coming soon" card with the usual call/quote buttons instead.
+* Live Trustpilot reviews: set your Trustpilot Business Unit ID in
+  `oneserv_trustpilot_business_id()` in functions.php (or hook the
+  'oneserv_trustpilot_business_id' filter) to swap the Reviews page over
+  to the live Trustpilot widget. Until set, it shows the Reviews custom
+  post type entries / sample testimonials instead.
 
 == Notes ==
 
