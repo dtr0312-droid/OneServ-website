@@ -1,39 +1,44 @@
 <?php
 /**
- * The header for the OneServ theme.
+ * The header for the OneServ theme. Markup mirrors the real oneserv.co.uk
+ * layout: a dark utility bar, then a sticky header with logo / nav / call
+ * block, so the theme's classes (.utility-bar, .header-row, .mainnav,
+ * .call-block, etc.) match style.css one-to-one.
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-<div class="site-topbar">
-	<div class="container">
-		<div class="site-topbar__contact">
-			<span><?php echo oneserv_icon( 'phone' ); ?> <a href="<?php echo esc_attr( oneserv_contact( 'phone_href' ) ); ?>"><?php echo esc_html( oneserv_contact( 'phone' ) ); ?></a></span>
-			<span><?php echo oneserv_icon( 'mail' ); ?> <a href="mailto:<?php echo esc_attr( oneserv_contact( 'email' ) ); ?>"><?php echo esc_html( oneserv_contact( 'email' ) ); ?></a></span>
-			<span><?php echo oneserv_icon( 'clock' ); ?> <?php echo esc_html( oneserv_contact( 'hours' ) ); ?></span>
+<div class="utility-bar">
+	<div class="wrap">
+		<div class="social">
+			<a href="https://www.facebook.com/OneServ1/" target="_blank" rel="noopener">Facebook</a>
+			<a href="https://twitter.com/OneServ1" target="_blank" rel="noopener">X</a>
+			<a href="https://www.instagram.com/one.serv/" target="_blank" rel="noopener">Instagram</a>
 		</div>
-		<div class="site-topbar__social">
-			<a href="<?php echo esc_url( home_url( '/price-promise/' ) ); ?>">Our Price Promise</a>
+		<div class="links">
+			<a href="#">Finance</a>
+			<a href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Careers</a>
+			<a href="<?php echo esc_url( home_url( '/reviews/' ) ); ?>">Review Us</a>
 		</div>
 	</div>
 </div>
 
 <header class="site-header" id="masthead">
-	<div class="container">
-		<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<?php echo file_get_contents( ONESERV_DIR . '/assets/images/logo-mark.svg' ); ?>
-			<span class="site-logo__text">One<span>Serv</span></span>
+	<div class="header-row">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
+			<img src="<?php echo esc_url( ONESERV_URI . '/assets/images/logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 		</a>
 
-		<nav class="main-nav" id="main-nav" aria-label="Primary">
+		<nav class="mainnav" id="main-nav" aria-label="Primary">
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
@@ -44,17 +49,16 @@
 			?>
 		</nav>
 
-		<div class="header-cta">
-			<div class="header-cta__phone">
-				<small>Call us now</small>
-				<a href="<?php echo esc_attr( oneserv_contact( 'phone_href' ) ); ?>"><?php echo esc_html( oneserv_contact( 'phone' ) ); ?></a>
+		<div class="header-right">
+			<div class="call-block">
+				<div class="lbl">Call us today</div>
+				<a class="num" href="<?php echo esc_attr( oneserv_contact( 'phone_href' ) ); ?>"><?php echo esc_html( oneserv_contact( 'phone' ) ); ?></a>
 			</div>
-			<a class="btn btn--accent" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get a Quote</a>
+			<a href="<?php echo esc_url( home_url( '/new-boilers/' ) ); ?>" class="btn btn-orange">Book Online</a>
+			<button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
 		</div>
-
-		<button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
-			<span></span><span></span><span></span>
-		</button>
 	</div>
 </header>
 

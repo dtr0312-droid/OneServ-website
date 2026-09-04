@@ -1,20 +1,24 @@
 === OneServ ===
 
 A custom WordPress theme built for a boiler & heating engineering company,
-covering: Home, About Us, Careers, New Boilers, Boiler & Heating Care Plans,
-Boiler Servicing, Boiler Repair, Power Flushing, Commercial Heating, five
-service-area town pages (Castleford, Doncaster, Knottingley, Pontefract,
-Selby), Contact, Reviews, Price Promise, Terms & Conditions, Privacy Policy
-and Sitemap.
+covering: Home, About Us, Services (hub), Careers, New Boilers, Boiler &
+Heating Care Plans, Boiler Servicing, Boiler Repair, Power Flushing,
+Commercial Heating, five service-area town pages (Castleford, Doncaster,
+Knottingley, Pontefract, Selby), Contact, Reviews, Price Promise, Terms &
+Conditions, Privacy Policy and Sitemap. The design (colours, fonts, header/
+footer layout and every component) matches the real oneserv.co.uk site.
 
 == Installation ==
 
 1. In WordPress admin, go to Appearance > Themes > Add New > Upload Theme.
 2. Choose oneserv.zip and click Install Now, then Activate.
-3. Activating the theme automatically creates all 19 pages listed above
+3. Activating the theme automatically creates all 20 pages listed above
    (only if a page with that slug doesn't already exist), sets the Home
-   page as your static front page, and builds a Primary Menu with Services
-   and Service Areas dropdowns.
+   page as your static front page, and builds a Primary Menu matching the
+   real site's flat 8-item nav (Home, About Us, New Boilers, Boiler Cover,
+   Services, Commercial Heating, Reviews, Contact — no dropdowns, same as
+   live). Careers and the service-area town pages are reached from the
+   utility bar / footer, same as the real site.
 4. Go to Appearance > Menus to confirm "Primary Menu" is assigned to the
    "Primary Menu" location (it's done automatically on first activation,
    but check if you're re-activating on a site with existing content).
@@ -33,10 +37,10 @@ and Sitemap.
 * Real customer reviews: add them as "Reviews" > "Add New Testimonial" in
   wp-admin (set the star rating and area in the side panel) — once you add
   real testimonials they automatically replace the placeholder set.
-* Logo: replace assets/images/logo-mark.svg, or add a custom logo via
-  Appearance > Customize if you prefer a raster logo.
+* Logo: replace assets/images/logo.png (the real OneServ logo, pulled from
+  the site owner's own site) with an updated file of the same name.
 * Colours: edit the CSS custom properties at the top of style.css
-  (--color-primary, --color-accent, etc.).
+  (--blue, --orange, etc. — these match the real site's palette).
 * Instant boiler quote tool: the New Boilers page embeds it via iframe.
   Set its live URL in `oneserv_quote_tool_url()` in functions.php (or hook
   the 'oneserv_quote_tool_url' filter). Until set, that page shows a

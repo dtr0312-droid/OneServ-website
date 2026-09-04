@@ -7,6 +7,7 @@ get_template_part( 'template-parts/page-hero', null, array(
 	'eyebrow' => 'Sitemap',
 	'title'   => 'Sitemap',
 	'lead'    => 'Every page on the OneServ site, in one place.',
+	'ctas'    => false,
 ) );
 ?>
 

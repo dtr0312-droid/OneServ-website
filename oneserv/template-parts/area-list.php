@@ -1,14 +1,17 @@
 <?php
 /**
- * Pill list of service-area towns, linking to each town page.
+ * Pill grid of service-area towns, matching the real site's .area-grid /
+ * .area-chip markup.
  * Expects $args: exclude (slug to leave out, optional).
  */
 $exclude = $args['exclude'] ?? '';
+$current = get_post() ? get_post()->post_name : '';
 ?>
-<div class="area-list">
+<div class="area-grid">
 	<?php foreach ( oneserv_towns() as $slug => $t ) :
 		if ( $slug === $exclude ) continue;
+		$active = ( $slug === $current ) ? ' active' : '';
 		?>
-		<a href="<?php echo esc_url( home_url( '/' . $slug . '/' ) ); ?>"><?php echo oneserv_icon( 'pin' ); ?> <?php echo esc_html( $t['name'] ); ?></a>
+		<a class="area-chip<?php echo esc_attr( $active ); ?>" href="<?php echo esc_url( home_url( '/' . $slug . '/' ) ); ?>"><?php echo esc_html( $t['name'] ); ?></a>
 	<?php endforeach; ?>
 </div>

@@ -3,22 +3,21 @@
  * Page template, auto-applied by WordPress to the page with slug "boiler-repair".
  */
 get_header();
-$services = oneserv_services();
-$s = $services['boiler-repair'];
 get_template_part( 'template-parts/page-hero', null, array(
-	'eyebrow' => 'Service',
-	'title'   => $s['title'],
-	'lead'    => $s['short'],
+	'eyebrow' => 'Boiler Repairs across Yorkshire',
+	'title'   => 'Boiler Repairs For Pontefract & Beyond',
+	'lead'    => "Book your repair online or speak to one of our experts — we'll promptly respond to your enquiry.",
 ) );
 ?>
 
-<section class="section">
-	<div class="container">
-		<div class="section-head">
-			<span class="eyebrow">Fixed prices</span>
-			<h2>Boiler Repair Fees</h2>
-		</div>
-		<table class="plan-table" style="max-width:760px;margin:0 auto;">
+<section>
+	<div class="wrap body-copy" style="max-width:820px;">
+		<h3>Steps to Take to Avoid Boiler Breakdowns</h3>
+		<p><strong>Regular Boiler Maintenance:</strong> Boiler servicing should be conducted annually. During these visits, an engineer will thoroughly examine your boiler, clean internal components, check for leaks, and identify any potential issues before they escalate into major problems.</p>
+	</div>
+	<div class="wrap" style="max-width:760px;">
+		<h2>Boiler Repair Fees</h2>
+		<table class="price-table">
 			<thead>
 				<tr><th>Boiler Issue</th><th>Fixed Price Inc. VAT</th></tr>
 			</thead>
@@ -30,7 +29,7 @@ get_template_part( 'template-parts/page-hero', null, array(
 				<tr><td>Add a boiler service whilst on site</td><td>£50</td></tr>
 			</tbody>
 		</table>
-		<p style="max-width:760px;margin:16px auto 0;color:var(--color-muted);font-size:0.85rem;">Prices shown are as published on the current live site at time of writing &mdash; confirm current rates before publishing.</p>
+		<p style="color:var(--steel);font-size:13px;">Prices shown are as published on the current live site at time of writing &mdash; confirm current rates before publishing.</p>
 	</div>
 </section>
 

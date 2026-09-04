@@ -1,20 +1,18 @@
 <?php
 /**
- * Reusable CTA banner.
- * Expects $args: title, text, btn_text, btn_url.
+ * Full-width blue CTA band, matching the real homepage's
+ * "Need A New Boiler? Get A Quote Now!" section.
+ * Expects $args: title, text (optional), btn_text, btn_url.
  */
-$title    = $args['title'] ?? 'Ready to book your engineer?';
-$text     = $args['text'] ?? 'Get a fast, fair, fixed-price quote today.';
-$btn_text = $args['btn_text'] ?? 'Get a Free Quote';
-$btn_url  = $args['btn_url'] ?? home_url( '/contact/' );
+$title    = $args['title'] ?? 'Need A New Boiler? Get A Quote Now!';
+$text     = $args['text'] ?? '';
+$btn_text = $args['btn_text'] ?? 'Get a Free Boiler Quote';
+$btn_url  = $args['btn_url'] ?? home_url( '/new-boilers/' );
 ?>
-<div class="cta-banner">
-	<div>
+<section class="cta-band">
+	<div class="wrap">
 		<h2><?php echo esc_html( $title ); ?></h2>
-		<p><?php echo esc_html( $text ); ?></p>
+		<?php if ( $text ) : ?><p><?php echo esc_html( $text ); ?></p><?php endif; ?>
+		<a href="<?php echo esc_url( $btn_url ); ?>" class="btn"><?php echo esc_html( $btn_text ); ?></a>
 	</div>
-	<div class="btn-row">
-		<a class="btn btn--ghost-light" href="<?php echo esc_url( $btn_url ); ?>"><?php echo esc_html( $btn_text ); ?></a>
-		<a class="btn" style="background:#fff;color:var(--color-accent-dark);" href="tel:<?php echo esc_attr( str_replace( ' ', '', oneserv_contact( 'phone' ) ) ); ?>"><?php echo oneserv_icon( 'phone' ); ?> <?php echo esc_html( oneserv_contact( 'phone' ) ); ?></a>
-	</div>
-</div>
+</section>

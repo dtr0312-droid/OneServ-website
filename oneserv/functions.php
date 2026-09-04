@@ -38,7 +38,7 @@ add_action( 'after_setup_theme', 'oneserv_setup' );
  * Enqueue styles and scripts.
  */
 function oneserv_assets() {
-	wp_enqueue_style( 'oneserv-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap', array(), null );
+	wp_enqueue_style( 'oneserv-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap', array(), null );
 	wp_enqueue_style( 'oneserv-style', get_stylesheet_uri(), array(), ONESERV_VERSION );
 	wp_enqueue_script( 'oneserv-main', ONESERV_URI . '/assets/js/main.js', array(), ONESERV_VERSION, true );
 
@@ -143,7 +143,10 @@ function oneserv_fallback_menu() {
 	echo '<ul>';
 	echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">Home</a></li>';
 	echo '<li><a href="' . esc_url( home_url( '/about-us/' ) ) . '">About Us</a></li>';
-	echo '<li><a href="' . esc_url( home_url( '/boiler-servicing/' ) ) . '">Services</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/new-boilers/' ) ) . '">New Boilers</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/boiler-heating-care-plans/' ) ) . '">Boiler Cover</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/heating/' ) ) . '">Services</a></li>';
+	echo '<li><a href="' . esc_url( home_url( '/commercial-heating/' ) ) . '">Commercial Heating</a></li>';
 	echo '<li><a href="' . esc_url( home_url( '/reviews/' ) ) . '">Reviews</a></li>';
 	echo '<li><a href="' . esc_url( home_url( '/contact/' ) ) . '">Contact</a></li>';
 	echo '</ul>';

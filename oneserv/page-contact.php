@@ -6,68 +6,47 @@
  */
 get_header();
 get_template_part( 'template-parts/page-hero', null, array(
-	'eyebrow' => 'Contact',
-	'title'   => 'Get in touch',
-	'lead'    => "Call, email or send us a message and we'll get back to you the same working day.",
+	'eyebrow' => 'Get In Touch',
+	'title'   => 'Need Assistance?',
+	'lead'    => 'Contact us today or drop us a message!',
+	'ctas'    => false,
 ) );
 ?>
 
-<section class="section">
-	<div class="container">
-		<div class="grid grid--2" style="align-items:flex-start;">
-			<div class="contact-panel">
-				<h2>Request a callback</h2>
-				<p>Fill in the form and a member of the team will be in touch shortly.</p>
-				<form class="contact-form" method="post" action="">
-					<div class="grid grid--2">
-						<div class="form-field">
-							<label for="name">Full name</label>
-							<input type="text" id="name" name="name" required>
-						</div>
-						<div class="form-field">
-							<label for="phone">Phone number</label>
-							<input type="tel" id="phone" name="phone" required>
-						</div>
-					</div>
-					<div class="form-field">
-						<label for="email">Email address</label>
-						<input type="email" id="email" name="email" required>
-					</div>
-					<div class="form-field">
-						<label for="service">What do you need help with?</label>
-						<select id="service" name="service">
-							<option>New boiler installation</option>
-							<option>Boiler repair</option>
-							<option>Boiler servicing</option>
-							<option>Power flushing</option>
-							<option>Care plan enquiry</option>
-							<option>Commercial heating</option>
-							<option>Something else</option>
-						</select>
-					</div>
-					<div class="form-field">
-						<label for="message">Message</label>
-						<textarea id="message" name="message" rows="5"></textarea>
-					</div>
-					<button type="submit" class="btn btn--accent btn--block">Send message</button>
-				</form>
-			</div>
+<section>
+	<div class="wrap contact-grid">
+		<form class="contact-form" method="post" action="">
+			<input type="text" name="name" placeholder="Full name" aria-label="Full name" required>
+			<input type="tel" name="phone" placeholder="Phone number" aria-label="Phone number" required>
+			<input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+			<select name="service" aria-label="What do you need help with?">
+				<option>New boiler installation</option>
+				<option>Boiler repair</option>
+				<option>Boiler servicing</option>
+				<option>Power flushing</option>
+				<option>Care plan enquiry</option>
+				<option>Commercial heating</option>
+				<option>Something else</option>
+			</select>
+			<textarea rows="4" name="message" placeholder="What do you need help with?" aria-label="Message"></textarea>
+			<button class="btn btn-orange" style="width:100%;" type="submit">Send message</button>
+		</form>
 
-			<div class="contact-info-card">
-				<h3>Contact details</h3>
-				<ul class="icon-list">
-					<li><?php echo oneserv_icon( 'phone' ); ?><span><a href="<?php echo esc_attr( oneserv_contact( 'phone_href' ) ); ?>"><?php echo esc_html( oneserv_contact( 'phone' ) ); ?></a></span></li>
-					<li><?php echo oneserv_icon( 'mail' ); ?><span><a href="mailto:<?php echo esc_attr( oneserv_contact( 'email' ) ); ?>"><?php echo esc_html( oneserv_contact( 'email' ) ); ?></a></span></li>
-					<li><?php echo oneserv_icon( 'pin' ); ?><span><?php echo esc_html( oneserv_contact( 'address' ) ); ?></span></li>
-					<li><?php echo oneserv_icon( 'clock' ); ?><span><?php echo esc_html( oneserv_contact( 'hours' ) ); ?></span></li>
-				</ul>
-				<div class="map-embed">
-					<iframe src="<?php echo esc_url( oneserv_map_embed_url() ); ?>" title="OneServ location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				<h3 style="margin-top:32px;">Areas we cover</h3>
-				<?php get_template_part( 'template-parts/area-list' ); ?>
+		<div class="contact-info-card">
+			<div class="contact-row"><div><div class="lbl">Address</div><div class="val"><?php echo esc_html( oneserv_contact( 'address' ) ); ?></div></div></div>
+			<div class="contact-row"><div><div class="lbl">Phone</div><div class="val"><a href="<?php echo esc_attr( oneserv_contact( 'phone_href' ) ); ?>"><?php echo esc_html( oneserv_contact( 'phone' ) ); ?></a></div></div></div>
+			<div class="contact-row"><div><div class="lbl">Email</div><div class="val"><a href="mailto:<?php echo esc_attr( oneserv_contact( 'email' ) ); ?>"><?php echo esc_html( oneserv_contact( 'email' ) ); ?></a></div></div></div>
+			<div class="map-embed">
+				<iframe src="<?php echo esc_url( oneserv_map_embed_url() ); ?>" title="OneServ location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="section-tint">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:20px;"><h4>Areas We Cover</h4></div>
+		<?php get_template_part( 'template-parts/area-list' ); ?>
 	</div>
 </section>
 

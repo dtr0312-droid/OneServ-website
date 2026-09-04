@@ -4,9 +4,10 @@
  */
 get_header();
 get_template_part( 'template-parts/page-hero', null, array(
-	'eyebrow' => 'Careers',
-	'title'   => 'Join the OneServ team',
-	'lead'    => "We're growing and looking for experienced, reliable people to join us across our Yorkshire service area.",
+	'eyebrow' => 'Join The Team',
+	'title'   => "Are You the Yorkshire Heating Expert We're Looking For?",
+	'lead'    => "We're always keen to hear from experienced, Gas Safe registered engineers looking to join a growing local team.",
+	'ctas'    => false,
 ) );
 
 $vacancies = array(
@@ -37,48 +38,51 @@ $vacancies = array(
 );
 ?>
 
-<section class="section">
-	<div class="container">
-		<div class="section-head">
+<section>
+	<div class="wrap body-copy" style="max-width:820px;">
+		<p>With years of experience offering heating services across Yorkshire, OneServ Ltd are proud to be a professional and reliable company in Yorkshire.</p>
+		<p>We understand the most commonly occurring problems when it comes to heating &mdash; our engineers are trained to the highest standards to fix heating issues in the best way possible, to the highest standards.</p>
+	</div>
+</section>
+
+<section class="section-tint">
+	<div class="wrap">
+		<div class="center" style="margin-bottom:20px;">
 			<span class="eyebrow">Current vacancies</span>
 			<h2>Open roles</h2>
 		</div>
-		<div class="grid grid--2">
+		<div class="card-list grid--2">
 			<?php foreach ( $vacancies as $v ) : ?>
 				<div class="card">
-					<h3><?php echo esc_html( $v['title'] ); ?></h3>
-					<p class="card__meta"><?php echo oneserv_icon( 'pin' ); ?> <?php echo esc_html( $v['location'] ); ?> &middot; <?php echo esc_html( $v['type'] ); ?></p>
+					<h4><?php echo esc_html( $v['title'] ); ?></h4>
+					<p style="font-size:12px;color:var(--steel);margin-bottom:8px;"><?php echo esc_html( $v['location'] ); ?> &middot; <?php echo esc_html( $v['type'] ); ?></p>
 					<p><?php echo esc_html( $v['desc'] ); ?></p>
-					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Apply now</a>
+					<a class="btn btn-outline" style="margin-top:10px;" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Apply now</a>
 				</div>
 			<?php endforeach; ?>
 		</div>
 	</div>
 </section>
 
-<section class="section section--alt">
-	<div class="container">
-		<div class="section-head">
+<section>
+	<div class="wrap">
+		<div class="center" style="margin-bottom:20px;">
 			<span class="eyebrow">Why work here</span>
 			<h2>What we offer</h2>
 		</div>
-		<div class="grid grid--4">
-			<div class="card"><div class="card__icon"><?php echo oneserv_icon( 'check' ); ?></div><h3>Competitive pay</h3><p>Above-market rates plus overtime and bonus schemes.</p></div>
-			<div class="card"><div class="card__icon"><?php echo oneserv_icon( 'check' ); ?></div><h3>Company van &amp; tools</h3><p>Fully equipped van, uniform and tools provided for engineer roles.</p></div>
-			<div class="card"><div class="card__icon"><?php echo oneserv_icon( 'check' ); ?></div><h3>Training &amp; development</h3><p>Ongoing manufacturer training and support toward further qualifications.</p></div>
-			<div class="card"><div class="card__icon"><?php echo oneserv_icon( 'check' ); ?></div><h3>Local work</h3><p>Jobs close to home across our Yorkshire service area &mdash; no long-distance travel.</p></div>
+		<div class="card-list grid--4">
+			<div class="card"><h4>Competitive pay</h4><p>Above-market rates plus overtime and bonus schemes.</p></div>
+			<div class="card"><h4>Company van &amp; tools</h4><p>Fully equipped van, uniform and tools provided for engineer roles.</p></div>
+			<div class="card"><h4>Training &amp; development</h4><p>Ongoing manufacturer training and support toward further qualifications.</p></div>
+			<div class="card"><h4>Local work</h4><p>Jobs close to home across our Yorkshire service area &mdash; no long-distance travel.</p></div>
 		</div>
 	</div>
 </section>
 
-<section class="section">
-	<div class="container">
-		<?php get_template_part( 'template-parts/cta-banner', null, array(
-			'title'    => "Don't see the right role?",
-			'text'     => "Send us your CV anyway — we're always happy to hear from good engineers.",
-			'btn_text' => 'Send your CV',
-		) ); ?>
-	</div>
-</section>
+<?php get_template_part( 'template-parts/cta-banner', null, array(
+	'title'    => "Don't see the right role?",
+	'btn_text' => 'Send your CV',
+	'btn_url'  => home_url( '/contact/' ),
+) ); ?>
 
 <?php get_footer(); ?>

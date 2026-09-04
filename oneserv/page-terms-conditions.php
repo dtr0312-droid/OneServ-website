@@ -7,12 +7,12 @@ get_header();
 get_template_part( 'template-parts/page-hero', null, array(
 	'eyebrow' => 'Legal',
 	'title'   => 'Terms & Conditions',
+	'ctas'    => false,
 ) );
 ?>
 
-<section class="section">
-	<div class="container">
-		<div class="content-page">
+<section>
+	<div class="wrap body-copy" style="max-width:820px;">
 			<p><em>Last updated: <?php echo esc_html( date( 'F Y' ) ); ?>. This is placeholder text — please replace with terms reviewed by a solicitor before publishing.</em></p>
 
 			<h2>1. About us</h2>
@@ -38,7 +38,6 @@ get_template_part( 'template-parts/page-hero', null, array(
 
 			<h2>8. Contact</h2>
 			<p>Questions about these terms can be sent to <a href="mailto:<?php echo esc_attr( oneserv_contact( 'email' ) ); ?>"><?php echo esc_html( oneserv_contact( 'email' ) ); ?></a>.</p>
-		</div>
 	</div>
 </section>
 

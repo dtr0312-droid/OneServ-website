@@ -1,19 +1,18 @@
 <?php
 /**
- * Grid of service cards. Optionally exclude the current page's own slug.
+ * Grid of service cards, styled like the real site's heating.html card-list.
  * Expects $args: exclude (slug to leave out, optional).
  */
 $exclude = $args['exclude'] ?? '';
 ?>
-<div class="grid grid--3">
+<div class="card-list">
 	<?php foreach ( oneserv_services() as $slug => $s ) :
 		if ( $slug === $exclude ) continue;
 		?>
-		<div class="card service-card">
-			<div class="card__icon"><?php echo oneserv_icon( $s['icon'] ); ?></div>
-			<h3><a class="card-title" href="<?php echo esc_url( home_url( '/' . $slug . '/' ) ); ?>"><?php echo esc_html( $s['title'] ); ?></a></h3>
+		<div class="card">
+			<h4><?php echo esc_html( $s['title'] ); ?></h4>
 			<p><?php echo esc_html( $s['short'] ); ?></p>
-			<a class="more" href="<?php echo esc_url( home_url( '/' . $slug . '/' ) ); ?>">Learn more <?php echo oneserv_icon( 'arrow' ); ?></a>
+			<a href="<?php echo esc_url( home_url( '/' . $slug . '/' ) ); ?>" class="btn btn-outline" style="margin-top:10px;">Learn more</a>
 		</div>
 	<?php endforeach; ?>
 </div>

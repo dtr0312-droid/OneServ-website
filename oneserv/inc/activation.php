@@ -23,6 +23,7 @@ function oneserv_default_pages() {
 	$pages = array(
 		'home'         => array( 'title' => 'Home', 'content' => 'Welcome to OneServ.' ),
 		'about-us'     => array( 'title' => 'About Us', 'content' => 'Learn more about OneServ.' ),
+		'heating'      => array( 'title' => 'Services', 'content' => 'Our full range of heating and boiler services.' ),
 		'careers'      => array( 'title' => 'Careers', 'content' => 'Current vacancies at OneServ.' ),
 		'contact'      => array( 'title' => 'Contact Us', 'content' => 'Get in touch with OneServ.' ),
 		'reviews'      => array( 'title' => 'Reviews', 'content' => 'What our customers say.' ),
@@ -74,9 +75,12 @@ function oneserv_create_default_content() {
 add_action( 'after_switch_theme', 'oneserv_create_default_content' );
 
 /**
- * Builds a "Primary" nav menu with Services and Service Areas dropdowns,
- * only if a menu isn't already assigned to that location (so it won't
- * clobber a menu the site owner has already customised).
+ * Builds a "Primary" nav menu matching the real site's flat 8-item nav
+ * (Home, About Us, New Boilers, Boiler Cover, Services, Commercial
+ * Heating, Reviews, Contact — no dropdowns), only if a menu isn't already
+ * assigned to that location (so it won't clobber a menu the site owner
+ * has already customised). Careers and the service-area town pages are
+ * reachable from the utility bar / footer, same as the real site.
  */
 function oneserv_create_primary_menu( $ids ) {
 	if ( has_nav_menu( 'primary' ) ) {
@@ -113,20 +117,12 @@ function oneserv_create_primary_menu( $ids ) {
 	};
 
 	$add_item( 'Home', 'home' );
-	$about = $add_item( 'About Us', 'about-us' );
-
-	$services = $add_item( 'Services', home_url( '/boiler-servicing/' ), 0, false );
-	foreach ( oneserv_services() as $slug => $s ) {
-		$add_item( $s['title'], $slug, $services );
-	}
-
-	$areas = $add_item( 'Service Areas', home_url( '/price-promise/' ), 0, false );
-	foreach ( oneserv_towns() as $slug => $t ) {
-		$add_item( $t['name'], $slug, $areas );
-	}
-
+	$add_item( 'About Us', 'about-us' );
+	$add_item( 'New Boilers', 'new-boilers' );
+	$add_item( 'Boiler Cover', 'boiler-heating-care-plans' );
+	$add_item( 'Services', 'heating' );
+	$add_item( 'Commercial Heating', 'commercial-heating' );
 	$add_item( 'Reviews', 'reviews' );
-	$add_item( 'Careers', 'careers' );
 	$add_item( 'Contact', 'contact' );
 
 	$locations = get_theme_mod( 'nav_menu_locations' );

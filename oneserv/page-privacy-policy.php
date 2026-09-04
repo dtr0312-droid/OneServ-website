@@ -7,12 +7,12 @@ get_header();
 get_template_part( 'template-parts/page-hero', null, array(
 	'eyebrow' => 'Legal',
 	'title'   => 'Privacy Policy',
+	'ctas'    => false,
 ) );
 ?>
 
-<section class="section">
-	<div class="container">
-		<div class="content-page">
+<section>
+	<div class="wrap body-copy" style="max-width:820px;">
 			<p><em>Last updated: <?php echo esc_html( date( 'F Y' ) ); ?>. This is placeholder text — please replace with a policy reviewed for UK GDPR compliance before publishing.</em></p>
 
 			<h2>1. Who we are</h2>
@@ -48,7 +48,6 @@ get_template_part( 'template-parts/page-hero', null, array(
 
 			<h2>8. Contact us</h2>
 			<p>For any privacy questions, contact us at <a href="mailto:<?php echo esc_attr( oneserv_contact( 'email' ) ); ?>"><?php echo esc_html( oneserv_contact( 'email' ) ); ?></a> or <?php echo esc_html( oneserv_contact( 'address' ) ); ?>.</p>
-		</div>
 	</div>
 </section>
 

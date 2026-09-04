@@ -7,15 +7,13 @@ get_header();
 get_template_part( 'template-parts/page-hero', null, array( 'title' => get_the_title() ) );
 ?>
 
-<section class="section">
-	<div class="container">
-		<div class="content-page">
-			<?php
-			while ( have_posts() ) : the_post();
-				the_content();
-			endwhile;
-			?>
-		</div>
+<section>
+	<div class="wrap body-copy" style="max-width:820px;">
+		<?php
+		while ( have_posts() ) : the_post();
+			the_content();
+		endwhile;
+		?>
 	</div>
 </section>
 
