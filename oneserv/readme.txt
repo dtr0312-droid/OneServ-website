@@ -54,5 +54,16 @@ and Sitemap.
   plugin (e.g. Contact Form 7, WPForms) before relying on it to receive
   enquiries.
 * Built from scratch to match the requested page structure of
-  www.oneserv.co.uk; it does not reuse any code, styling or text scraped
-  from that site.
+  www.oneserv.co.uk. Contact details (phone 01977 343461, address 22
+  Tabard Road, Goole, DN14 0UP, email hello@oneserv.co.uk), the footer's
+  Phoenix Financial Consultants credit-broker disclosure, the real
+  boiler repair fee table, the Price Promise £50-voucher offer, the
+  Power Flushing process copy, the Google Maps embed on Contact, and the
+  real sample Trustpilot quotes were carried over verbatim from the
+  site owner's own static HTML clone of the live site (supplied
+  directly), not scraped independently.
+* The HomeGuard Boiler & Heating Care Plan prices are still an honest
+  "Price TBC" placeholder — the real plan tiers/prices weren't available
+  at build time. Don't invent numbers here; get the real HomeGuard
+  pricing from the site owner before launch (see `oneserv_care_plans()`
+  in inc/site-data.php).

@@ -36,8 +36,8 @@ if ( $testimonials ) {
 <section class="section">
 	<div class="container">
 		<div class="stat-row text-center" style="justify-content:center;margin-bottom:48px;">
-			<div class="stat"><strong><?php echo esc_html( $avg ?: '4.9' ); ?> / 5</strong><span>Average rating</span></div>
-			<div class="stat"><strong><?php echo esc_html( count( $testimonials ) ?: '4' ); ?>+</strong><span>Reviews shown here</span></div>
+			<div class="stat"><strong>4.0</strong><span>TrustScore on Trustpilot</span></div>
+			<div class="stat"><strong><?php echo esc_html( $avg ?: '5' ); ?> / 5</strong><span>Average of reviews shown here</span></div>
 			<div class="stat"><strong>15,000+</strong><span>Jobs completed</span></div>
 		</div>
 		<div class="grid grid--3">

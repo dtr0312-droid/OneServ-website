@@ -38,6 +38,28 @@ get_template_part( 'template-parts/page-hero', null, array(
 	</div>
 </section>
 
+<section class="section section--alt">
+	<div class="container">
+		<div class="center" style="margin-bottom:20px;">
+			<h2>Brands We Install</h2>
+		</div>
+		<div class="grid grid--3">
+			<div class="card text-center">
+				<h3>Baxi</h3>
+				<p>Baxi approved installer &mdash; extended warranties on selected models.</p>
+			</div>
+			<div class="card text-center">
+				<h3>Vokèra</h3>
+				<p>Reliable, efficient A-rated combi and system boilers.</p>
+			</div>
+			<div class="card text-center">
+				<h3>Main &amp; Atag</h3>
+				<p>Premium efficiency ranges with up to 18-year warranties.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php
 get_template_part( 'template-parts/service-content', null, array( 'slug' => 'new-boilers' ) );
 get_footer();

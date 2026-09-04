@@ -4,24 +4,20 @@
  */
 get_header();
 get_template_part( 'template-parts/page-hero', null, array(
-	'eyebrow' => 'Care Plans',
-	'title'   => 'Boiler & Heating Care Plans',
-	'lead'    => 'One fixed monthly price for peace of mind: annual servicing, priority callouts and cover when things go wrong.',
+	'eyebrow' => 'HomeGuard Cover Plans',
+	'title'   => 'Local Boiler & Emergency Cover You Can Trust',
+	'lead'    => 'No excess to pay, parts & labour included, plus a free annual service — choose the plan that suits your home.',
 ) );
 ?>
 
 <section class="section">
 	<div class="container">
-		<div class="section-head">
-			<span class="eyebrow">Choose your cover</span>
-			<h2>Plans to suit every home</h2>
-			<p>No hidden fees, no long tie-ins after the first year. Cancel or switch plans any time.</p>
-		</div>
+		<p style="max-width:820px;margin:0 auto 32px;color:var(--color-muted);"><strong>Placeholder plan structure below</strong> &mdash; the current site's actual care plan tiers, prices and inclusions weren't accessible during this build; swap in your real HomeGuard plan details before this goes live.</p>
 		<div class="plan-grid">
 			<?php foreach ( oneserv_care_plans() as $plan ) : ?>
 				<div class="plan <?php echo $plan['featured'] ? 'plan--featured' : ''; ?>">
 					<h3><?php echo esc_html( $plan['name'] ); ?></h3>
-					<div class="price"><?php echo esc_html( $plan['price'] ); ?> <span>/ month</span></div>
+					<div class="price"><?php echo esc_html( $plan['price'] ); ?></div>
 					<ul>
 						<?php foreach ( $plan['features'] as $f ) : ?>
 							<li><?php echo oneserv_icon( 'check' ); ?><span><?php echo esc_html( $f ); ?></span></li>

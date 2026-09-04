@@ -4,14 +4,19 @@
  */
 get_header();
 get_template_part( 'template-parts/page-hero', null, array(
-	'eyebrow' => 'Our Price Promise',
-	'title'   => 'Fair, fixed prices. Always.',
-	'lead'    => "No call-out surprises, no vague estimates. We agree the price before we start, and that's the price you pay.",
+	'eyebrow' => 'Best Price Promise',
+	'title'   => "We're So Confident, We Guarantee It",
+	'lead'    => 'Full installation of your new boiler with total peace of mind.',
 ) );
 ?>
 
 <section class="section">
 	<div class="container">
+		<div class="section-head">
+			<span class="eyebrow">Our promise</span>
+			<h2>We Match All Like-For-Like Quotes</h2>
+			<p style="max-width:720px;margin:0 auto;">When you need a new boiler we understand that the hardest thing to do is find a good installer at a fair price. That's why we created our best price promise. We're so confident we can give you the best-fixed price installation that if we can't beat a like-for-like quote we'll give you a £50 Amazon voucher.</p>
+		</div>
 		<div class="grid grid--3">
 			<div class="card">
 				<div class="card__icon"><?php echo oneserv_icon( 'check' ); ?></div>
@@ -37,7 +42,7 @@ get_template_part( 'template-parts/page-hero', null, array(
 		<div class="section-head">
 			<span class="eyebrow">How we compare</span>
 			<h2>Beat any like-for-like quote</h2>
-			<p>If you have a written, like-for-like quote from another Gas Safe registered company, show us and we'll do our best to match or beat it.</p>
+			<p>If you have a written, like-for-like quote from another Gas Safe registered company, show us and we'll do our best to match or beat it &mdash; or you'll get a £50 Amazon voucher.</p>
 		</div>
 		<table class="plan-table">
 			<thead>

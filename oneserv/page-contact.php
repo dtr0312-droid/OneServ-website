@@ -61,6 +61,9 @@ get_template_part( 'template-parts/page-hero', null, array(
 					<li><?php echo oneserv_icon( 'pin' ); ?><span><?php echo esc_html( oneserv_contact( 'address' ) ); ?></span></li>
 					<li><?php echo oneserv_icon( 'clock' ); ?><span><?php echo esc_html( oneserv_contact( 'hours' ) ); ?></span></li>
 				</ul>
+				<div class="map-embed">
+					<iframe src="<?php echo esc_url( oneserv_map_embed_url() ); ?>" title="OneServ location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 				<h3 style="margin-top:32px;">Areas we cover</h3>
 				<?php get_template_part( 'template-parts/area-list' ); ?>
 			</div>

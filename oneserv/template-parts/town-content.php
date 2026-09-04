@@ -18,9 +18,9 @@ $t = $towns[ $slug ];
 				<p><?php echo esc_html( $t['blurb'] ); ?> We cover the whole area, <?php echo esc_html( $t['landmark'] ); ?>, with local engineers who know the housing stock and can usually get to you the same or next day.</p>
 				<ul class="icon-list">
 					<li><?php echo oneserv_icon( 'check' ); ?><span>Same-day and next-day boiler repair appointments</span></li>
-					<li><?php echo oneserv_icon( 'check' ); ?><span>New boiler installation with free home survey</span></li>
+					<li><?php echo oneserv_icon( 'check' ); ?><span>A-rated boilers from Main, Vok&egrave;ra and Baxi, with next-day installs available</span></li>
 					<li><?php echo oneserv_icon( 'check' ); ?><span>Annual servicing to keep warranties valid</span></li>
-					<li><?php echo oneserv_icon( 'check' ); ?><span>Boiler &amp; Heating Care Plans from £9.99/month</span></li>
+					<li><?php echo oneserv_icon( 'check' ); ?><span>HomeGuard Boiler &amp; Heating Care Plans</span></li>
 				</ul>
 				<div class="btn-row">
 					<a class="btn btn--accent" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get a Free Quote</a>

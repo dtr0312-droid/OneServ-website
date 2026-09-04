@@ -20,10 +20,10 @@ function oneserv_services() {
 			'icon'    => 'boiler',
 			'points'  => array(
 				'Free, no-obligation home survey and quotation',
-				'A-rated energy-efficient combi, system and regular boilers',
-				'Up to 12 years manufacturer warranty on selected models',
+				'A-rated boilers from Baxi, Vokèra, Main and Atag',
+				'5–18 years parts and labour warranty direct from the manufacturer',
 				'Old boiler removed and disposed of responsibly',
-				'Flexible finance plans, 0% options available',
+				'0% interest-free finance over 12 months, or 10.9% over 3–10 years',
 			),
 		),
 		'boiler-heating-care-plans' => array(
@@ -128,42 +128,44 @@ function oneserv_towns() {
 }
 
 /**
- * Care plan pricing tiers shown on the Boiler & Heating Care Plans page.
+ * Care plan (HomeGuard) pricing tiers shown on the Boiler & Heating Care
+ * Plans page.
+ *
+ * PLACEHOLDER PRICING: the live site's actual HomeGuard plan tiers, prices
+ * and inclusions weren't accessible at build time, so prices are shown as
+ * "Price TBC" rather than invented figures. Replace with the real numbers
+ * before launch.
  */
 function oneserv_care_plans() {
 	return array(
 		array(
-			'name'     => 'Essential Cover',
-			'price'    => '£9.99',
+			'name'     => 'Basic',
+			'price'    => 'Price TBC',
 			'featured' => false,
 			'features' => array(
 				'Annual boiler service',
-				'24/7 breakdown reporting',
-				'Priority booking (48hr response)',
-				'Gas Safe engineer network',
+				'Safety inspection',
+				'Excludes parts & labour cover',
 			),
 		),
 		array(
-			'name'     => 'Complete Care',
-			'price'    => '£16.99',
+			'name'     => 'Essential',
+			'price'    => 'Price TBC',
 			'featured' => true,
 			'features' => array(
-				'Everything in Essential Cover',
-				'Parts and labour on covered repairs',
-				'Same-day priority callout',
-				'Annual central heating check',
-				'No excess on claims',
+				'Boiler repair — parts & labour',
+				'Boiler replacement if unrepairable',
+				'Central heating system cover',
 			),
 		),
 		array(
-			'name'     => 'Landlord Plan',
-			'price'    => '£19.99',
+			'name'     => 'Advanced',
+			'price'    => 'Price TBC',
 			'featured' => false,
 			'features' => array(
-				'Everything in Complete Care',
-				'Annual gas safety certificate (CP12)',
-				'Tenant-facing emergency line',
-				'Multi-property discounts available',
+				'Everything in Essential',
+				'Annual service & carbon monoxide test',
+				'Energy efficiency check',
 			),
 		),
 	);
@@ -171,33 +173,29 @@ function oneserv_care_plans() {
 
 /**
  * Sample testimonials, used as a fallback if no `testimonial` posts exist
- * yet (see inc/custom-post-types.php).
+ * yet (see inc/custom-post-types.php). These are the real Trustpilot
+ * quotes pulled from oneserv.co.uk's public profile at build time — swap
+ * in fresh ones (or add real "Reviews" posts in wp-admin) as they come in.
  */
 function oneserv_sample_testimonials() {
 	return array(
 		array(
-			'name'   => 'Sarah H.',
-			'area'   => 'Pontefract',
+			'name'   => 'Trustpilot',
+			'area'   => 'Aug 2026',
 			'rating' => 5,
-			'text'   => 'Brilliant service from start to finish. The engineer explained everything, left the place spotless and the new boiler is so much quieter than the old one.',
+			'text'   => 'Instant response, swift delivery and fit of a new boiler, friendly guy, clean and cleared up, what more can I say? Absolutely 5 stars.',
 		),
 		array(
-			'name'   => 'Mark T.',
-			'area'   => 'Doncaster',
+			'name'   => 'Trustpilot',
+			'area'   => 'Jul 2026',
 			'rating' => 5,
-			'text'   => 'Boiler broke down on a Sunday in winter and they had someone out first thing Monday. Fixed within the hour and a fair, fixed price.',
+			'text'   => "Our plumber Ben's customer service was second to none. He single handedly removed two tanks and installed our new combi boiler with ease, and was always on time.",
 		),
 		array(
-			'name'   => 'Julie R.',
-			'area'   => 'Castleford',
+			'name'   => 'Trustpilot',
+			'area'   => 'Jun 2026',
 			'rating' => 5,
-			'text'   => "We've been on the Complete Care plan for two years now. Easy to book the annual service and it's saved us money on two call-outs already.",
-		),
-		array(
-			'name'   => 'Dave P.',
-			'area'   => 'Selby',
-			'rating' => 4,
-			'text'   => 'Good honest advice on power flushing our old system rather than just pushing a new boiler on us. Radiators are heating evenly now.',
+			'text'   => 'Ben came and serviced our boiler and installed a new gas fire. Friendly, very knowledgeable and did a superb job. Would recommend.',
 		),
 	);
 }

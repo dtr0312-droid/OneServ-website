@@ -4,9 +4,9 @@
  */
 get_header();
 get_template_part( 'template-parts/page-hero', null, array(
-	'eyebrow' => 'About Us',
-	'title'   => 'Local engineers, straightforward service',
-	'lead'    => "We're a Yorkshire-based boiler and heating company built on fair pricing, tidy workmanship and turning up when we say we will.",
+	'eyebrow' => 'About OneServ',
+	'title'   => 'Throughout Yorkshire, OneServ guarantees the best price for quality service.',
+	'lead'    => 'OneServ Ltd is a Yorkshire-based heating and gas company with over two decades of engineering experience.',
 ) );
 ?>
 
@@ -14,16 +14,16 @@ get_template_part( 'template-parts/page-hero', null, array(
 	<div class="container">
 		<div class="grid grid--2" style="align-items:center;">
 			<div>
-				<span class="eyebrow">Our story</span>
-				<h2>Why OneServ started</h2>
-				<p>OneServ was founded by local heating engineers who were tired of seeing customers overcharged and let down by national call-centre operators. We set out to build a company that does the opposite: local engineers who know the area, fixed prices agreed up front, and a real person to speak to if anything needs sorting.</p>
-				<p>Today our team covers Castleford, Doncaster, Knottingley, Pontefract, Selby and the surrounding villages, carrying out everything from routine servicing to full commercial heating installations.</p>
+				<span class="eyebrow">Who we are</span>
+				<h2>Your trusted partner for heating &amp; gas</h2>
+				<p>With over two decades of experience in the industry, our team of engineers brings unparalleled expertise and dedication to every project we undertake.</p>
+				<p>OneServ is a leading heating and gas company situated in Yorkshire. Our Gas Safe engineers provide dependable services across Yorkshire, including Pontefract, Castleford, Wakefield, Leeds and Doncaster, serving a 20-mile radius.</p>
 			</div>
 			<div class="card">
 				<div class="stat-row" style="flex-direction:column;gap:20px;">
-					<div class="stat"><strong>10+</strong><span>Years trading across Yorkshire</span></div>
+					<div class="stat"><strong>20+</strong><span>Years of engineering experience</span></div>
 					<div class="stat"><strong>15,000+</strong><span>Boiler jobs completed</span></div>
-					<div class="stat"><strong>4.9 / 5</strong><span>Average customer rating</span></div>
+					<div class="stat"><strong>4.0</strong><span>TrustScore on Trustpilot</span></div>
 				</div>
 			</div>
 		</div>
@@ -33,8 +33,32 @@ get_template_part( 'template-parts/page-hero', null, array(
 <section class="section section--alt">
 	<div class="container">
 		<div class="section-head">
+			<span class="eyebrow">Our services</span>
+			<h2>A comprehensive range, tailored to you</h2>
+			<p>From prompt and clean servicing or replacement of existing systems to round-the-clock emergency assistance, our skilled engineers are here to help.</p>
+		</div>
+		<div class="grid grid--2">
+			<ul class="icon-list">
+				<li><?php echo oneserv_icon( 'check' ); ?><span>Residential and commercial boiler installation, servicing &amp; repair</span></li>
+				<li><?php echo oneserv_icon( 'check' ); ?><span>HomeGuard cover plans</span></li>
+				<li><?php echo oneserv_icon( 'check' ); ?><span>Commercial heating systems installation and maintenance</span></li>
+				<li><?php echo oneserv_icon( 'check' ); ?><span>Commercial laundry equipment installation</span></li>
+			</ul>
+			<ul class="icon-list">
+				<li><?php echo oneserv_icon( 'check' ); ?><span>Commercial testing and purging</span></li>
+				<li><?php echo oneserv_icon( 'check' ); ?><span>LPG services</span></li>
+				<li><?php echo oneserv_icon( 'check' ); ?><span>Power flushing for boiler and radiator maintenance</span></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="section-head">
 			<span class="eyebrow">What we stand for</span>
-			<h2>Our values</h2>
+			<h2>Our commitment to excellence</h2>
+			<p style="max-width:720px;margin:0 auto;">We prioritise safety and quality in every aspect of our work. Our engineers undergo regular training at manufacturer in-house facilities to stay updated on the latest technical advancements and maintain Gas Safe certification. As Baxi approved installers, we offer extended warranties on selected boilers.</p>
 		</div>
 		<div class="grid grid--3">
 			<div class="card">

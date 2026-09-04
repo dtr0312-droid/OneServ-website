@@ -15,9 +15,9 @@
 				</a>
 				<p>Local, Gas Safe registered boiler and heating engineers covering Castleford, Doncaster, Knottingley, Pontefract, Selby and the surrounding areas.</p>
 				<div class="footer-social">
-					<a href="#" aria-label="Facebook"><?php echo oneserv_icon( 'facebook' ); ?></a>
-					<a href="#" aria-label="Twitter / X"><?php echo oneserv_icon( 'twitter' ); ?></a>
-					<a href="#" aria-label="Instagram"><?php echo oneserv_icon( 'instagram' ); ?></a>
+					<a href="https://www.facebook.com/OneServ1/" aria-label="Facebook" target="_blank" rel="noopener"><?php echo oneserv_icon( 'facebook' ); ?></a>
+					<a href="https://twitter.com/OneServ1" aria-label="Twitter / X" target="_blank" rel="noopener"><?php echo oneserv_icon( 'twitter' ); ?></a>
+					<a href="https://www.instagram.com/one.serv/" aria-label="Instagram" target="_blank" rel="noopener"><?php echo oneserv_icon( 'instagram' ); ?></a>
 				</div>
 			</div>
 
@@ -55,11 +55,17 @@
 			</div>
 		</div>
 
+		<p class="footer-legal">
+			OneServ Ltd is an Introducer Appointed Representative (Financial Services Register No. 1010796) of Phoenix Financial Consultants Limited (Phoenix). Phoenix is a credit broker, not a lender. Phoenix is authorised and regulated by the Financial Conduct Authority (FRN: 539195), and offers finance from its panel of lenders. All finance subject to status and credit checks.
+			<br><br>The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.
+		</p>
+
 		<div class="footer-bottom">
-			<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> OneServ. All rights reserved.</p>
+			<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> OneServ Ltd. All rights reserved.</p>
 			<ul>
 				<li><a href="<?php echo esc_url( home_url( '/terms-conditions/' ) ); ?>">Terms &amp; Conditions</a></li>
 				<li><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy Policy</a></li>
+				<li><a href="<?php echo esc_url( home_url( '/sitemap/' ) ); ?>">Sitemap</a></li>
 			</ul>
 		</div>
 	</div>

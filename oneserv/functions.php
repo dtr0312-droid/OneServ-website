@@ -70,10 +70,10 @@ add_action( 'widgets_init', 'oneserv_widgets_init' );
  */
 function oneserv_contact( $key = '' ) {
 	$contact = array(
-		'phone'        => '01977 123 456',
-		'phone_href'   => 'tel:01977123456',
-		'email'        => 'info@oneserv.co.uk',
-		'address'      => 'Unit 4, Aire Business Park, Castleford, WF10 1AB',
+		'phone'        => '01977 343461',
+		'phone_href'   => 'tel:01977343461',
+		'email'        => 'hello@oneserv.co.uk',
+		'address'      => '22 Tabard Road, Goole, North Yorkshire, DN14 0UP',
 		'hours'        => 'Mon–Fri 8am–6pm, Sat 9am–1pm. 24/7 emergency line for care plan members.',
 	);
 	$contact = apply_filters( 'oneserv_contact_details', $contact );
@@ -81,6 +81,16 @@ function oneserv_contact( $key = '' ) {
 		return isset( $contact[ $key ] ) ? $contact[ $key ] : '';
 	}
 	return $contact;
+}
+
+/**
+ * Google Maps embed URL for the Contact page. Defaults to OneServ's listed
+ * business location; override with the 'oneserv_map_embed_url' filter if
+ * the address ever changes.
+ */
+function oneserv_map_embed_url() {
+	$url = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1180.9260107701898!2d-1.1548671894857867!3d53.703082644782214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487915f6d33b9359%3A0xc9c567e379404846!2sOneserv%20Ltd!5e0!3m2!1sen!2sin!4v1735027262665!5m2!1sen!2sin';
+	return apply_filters( 'oneserv_map_embed_url', $url );
 }
 
 /**

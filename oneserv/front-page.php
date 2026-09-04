@@ -16,7 +16,7 @@ get_header();
 				<a class="btn btn--ghost-light" href="<?php echo esc_url( home_url( '/boiler-repair/' ) ); ?>">Book a Repair</a>
 			</div>
 			<div class="hero__trust">
-				<div><strong>4.9 / 5</strong><span>Average customer rating</span></div>
+				<div><strong>4.0</strong><span>TrustScore on Trustpilot</span></div>
 				<div><strong>15,000+</strong><span>Jobs completed</span></div>
 				<div><strong>24/7</strong><span>Emergency care plan cover</span></div>
 			</div>
@@ -63,7 +63,7 @@ get_header();
 			</div>
 			<div class="stat-row" style="flex-direction:column;gap:24px;">
 				<div class="card">
-					<div class="stat"><strong>10+</strong><span>Years serving Yorkshire homes</span></div>
+					<div class="stat"><strong>20+</strong><span>Years serving Yorkshire homes</span></div>
 				</div>
 				<div class="card">
 					<div class="stat"><strong>98%</strong><span>Jobs completed on first visit</span></div>
