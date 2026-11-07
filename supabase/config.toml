@@ -1,0 +1,3 @@
+# Settings for Supabase's GitHub integration. Only the SQL files in ./migrations are applied
+# to the database when this branch is merged. No passwords or keys belong in this folder.
+project_id = "oneserv"
